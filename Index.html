@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Component</title>
+</head>
+<body>
+    <div class="items">
+
+    </div>
+    <!-- <user-card 
+        linksrc="https://www.google.com"
+        imgsrc=""
+        hoversrc=""
+        productPrice = 'PKR 1790'
+        productName="Printed Shirt"
+        ></user-card> -->
+    <script src="./Index.js"></script>
+    <script>
+        let productDetails = [
+                {
+                    linkhref: "https://www.kayseria.com/media/catalog/product/cache/1/small_image/320x480/9df78eab33525d08d6e5fb8d27136e95/c/3/c3982_b.jpg",
+                    imghref: "https://www.kayseria.com/media/catalog/product/cache/1/small_image/320x480/9df78eab33525d08d6e5fb8d27136e95/c/3/c3982_b.jpg",
+                    imghoverhref: "https://www.kayseria.com/media/catalog/product/cache/1/small_image/320x480/9df78eab33525d08d6e5fb8d27136e95/c/3/c3982_b_2.jpg",
+                    name: 'printed Shirt',
+                    price: 'PKR 1790',
+                    location: "https://www.kayseria.com/checkout/cart/add/uenc/aHR0cHM6Ly93d3cua2F5c2VyaWEuY29tL3VuLXN0aXRjaGVkP2xpbWl0PTEy/product/21460/form_key/cuy8ASBM4fVDh2Pp/",
+                    sale: false,
+                    salevalue: '',
+                },
+                {
+                    linkhref: "https://www.kayseria.com/dyed-embroidered-shirt-22839",
+                    imghref: "https://www.kayseria.com/media/catalog/product/cache/1/small_image/320x480/9df78eab33525d08d6e5fb8d27136e95/c/4/c4003.jpg",
+                    imghoverhref: "https://www.kayseria.com/media/catalog/product/cache/1/small_image/320x480/9df78eab33525d08d6e5fb8d27136e95/c/4/c4003_3.jpg",
+                    name: 'Dyed & Embroidered Shirt',
+                    price: 'PKR 2490',
+                    location: "https://www.kayseria.com/checkout/cart/add/uenc/aHR0cHM6Ly93d3cua2F5c2VyaWEuY29tL3VuLXN0aXRjaGVkP2xpbWl0PTEy/product/21460/form_key/cuy8ASBM4fVDh2Pp/",
+                    sale: true,
+                    salevalue: '25%',
+                },
+                
+            ]
+        window.onload = function(){
+            productDetails.forEach(product=>{
+            document.querySelector(".items").innerHTML = `<user-card linksrc=${product.linkhref} imgsrc=${product.imghref} hoversrc=${product.imghoverhref} productName=${product.name} productPrice=${product.price}> <user-card>`
+        })
+        }
+            // div.innerHTML = `
+                // <user-card
+                //     linksrc=${product.linkhref}
+                //     imgsrc=${product.imghref}
+                //     hoversrc=${product.imghoverhref}
+                //     productName=${product.name}
+                //     productPrice=${product.price}>
+                //     ${sale?'<div slot="sale"><div class="labels-box" style="display: none;"><div class="pro-label special-label"><p class="salevalue"></p></div></div><div':''}
+                // <user-card>
+            // `
+            
+    </script>
+</body>
+</html>
